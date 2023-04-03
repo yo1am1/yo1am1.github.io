@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>mySpace</title>
+      <link type="text/css" rel="stylesheet" href="/Site/style.css" />
+  </head>
+<body>
+<h1> Welcome to <span class="magic"> my Space! </span> 
+</h1>
+<h5>by Trepalin Yegor <a href="https://github.com/yo1am1"> (GitHub: yo1am) </a></h5>
+  <header> 
+    <nav>
+      <ul>
+        <li><a class="active" href="/Site/home.html" id="this_active">Home</a></li>
+        <li><a href="/Site/About me/about.html">About me</a></li>
+        <li><a href="/Site/My Projects/projects.html">My Projects</a></li>
+        <li><a href="/Site/Contact/contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 100)
+    })
+
+  </script>
+</body>
+</html>

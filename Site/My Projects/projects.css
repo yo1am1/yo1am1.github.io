@@ -1,0 +1,591 @@
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (max-width: 1199px) {
+        :root {
+        --purple: #a16bff;
+        --violet: #8b5cff;
+        --pink: #ff5cd8;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ul {
+        border-radius: 25px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        -webkit-box-shadow:0px 0px 30px 1px rgba(45,255,196,0.47);
+        -moz-box-shadow: 0px 0px 30px 1px rgba(45,255,196,0.47);
+        box-shadow: 0px 0px 30px 1px rgba(45,255,196,0.47);
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: black;
+            border-radius: 25px;
+            opacity: 50%;
+        }
+    
+        .active{
+            background-color: black;
+            opacity: 80%;
+            border-radius: 25px;
+        }
+
+        body {
+            display: grid;
+            background: rgb(30,30,30);
+            position: relative;
+            width: 100vw;
+            height: 200vh;
+            margin: 0px;
+            overflow: overlay;
+            overflow-x: hidden;
+            /*place-items: center;*/
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+    
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            background:rgba(255,255,255,0.4);
+            border-radius: 25px;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Rubik", sans-serif;
+        }
+        
+        @keyframes background-pan {
+            from {
+                background-position: 0% center;
+    
+            }
+            to {
+                background-position: -200% center;
+            }
+        }
+
+        h1 {
+            position: absolute;
+            width: 691px;
+            height: 147px;
+            left: 50vw;
+            top: 50vh;
+            line-height: 70px;
+            color: white;
+            text-align: center;
+            font-family: "Rubik", sans-serif;
+            font-size: 320%;
+            font-weight: 400;
+            margin: 0px;
+            padding: 20px;
+            transform: translate(-50%, -50%);
+    
+        }
+
+        header {
+            display:block;
+            width: 100vw;
+            height: 10vh;
+            justify-content: space-between;
+            position: fixed;
+            align-items:center;
+            padding: 30px 10vw;
+            transition: 0.6s;
+            border-radius: 25px;
+        }
+        header.sticky {
+            padding: 2vh 2.55vw;
+            width: 99vw;
+            height: 6.2vh;
+            background:rgba(255,255,255,0.4);
+            border-radius: 30px;
+            margin: 0.6vw;
+            font-size:  0.9em;
+            transition: 0.4s;
+        }
+    
+        header.sticky li a {
+            padding: 1em 8.6vw;
+        }
+    
+        header.sticky ul li a {
+            /* FONT COLOR*/
+            color: black;
+            font-size: 0.9em;
+            transition: 0.6s;
+        }
+    
+        header.sticky .active {
+            /* ACTIVE */
+            background-color: black;
+            color: white;
+            font-size: 0.9em;
+            transition: 0.6s;
+        }
+    
+        header.sticky li :hover{
+            /* CHOOSE */
+            background-color: darkgray;
+            border-radius: 25px;
+            opacity: 50%;
+            font-size: 0.9em;
+            transition: 0.6s;
+        }
+        h1 > .magic {
+            font-family: "Rubik", sans-serif;
+            font-size: 72px;
+            animation: background-pan 2s linear infinite;
+            background: linear-gradient(
+                    to right,
+                    var(--purple),
+                    var(--violet),
+                    var(--pink),
+                    var(--purple)
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+        }
+    
+    
+
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width: 1200px) {
+    :root {
+    --purple: #a16bff;
+    --violet: #8b5cff;
+    --pink: #ff5cd8;
+    }
+
+    @keyframes background-pan {
+        from {
+            background-position: 0% center;
+
+        }
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    @keyframes scale {
+        from, to {
+            transform: scale(0);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        display: grid;
+        background: rgb(30,30,30);
+        position: relative;
+        width: 100vw;
+        height: 400vh;
+        margin: 0px;
+        overflow: overlay;
+        overflow-x: hidden;
+        /*place-items: center;*/
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background:rgba(255,255,255,0.4);
+        border-radius: 25px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Rubik", sans-serif;
+    }
+
+    ul {
+        border-radius: 25px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(24,24,24,0.8);
+        -webkit-box-shadow:0px 0px 30px 1px rgba(202, 45, 255, 0.877);
+        -moz-box-shadow: 0px 0px 30px 1px rgba(202, 45, 255, 0.877);
+        box-shadow: 0px 0px 30px 1px rgba(202, 45, 255, 0.47);
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: black;
+        border-radius: 25px;
+        opacity: 50%;
+    }
+
+    .active{
+        background-color: black;
+        opacity: 80%;
+        border-radius: 25px;
+    }
+
+    header {
+        display:block;
+        width: 100vw;
+        height: 10vh;
+        justify-content: space-between;
+        position: fixed;
+        align-items:center;
+        padding: 1em 10vw;
+        transition: 0.6s;
+        border-radius: 25px;
+    }
+
+    header.sticky {
+        padding: 2vh 2.55vw;
+        width: 98.8vw;
+        height: 10vh;
+        background:transparent;
+        border-radius: 30px;
+        margin: 0.5vw;
+        font-size: 0.9em;
+        transition: 0.1s;
+        z-index: 1;
+    }
+
+    header.sticky li a {
+        padding: 1em 10vw;
+    }
+
+    header.sticky ul li a {
+        /* FONT COLOR*/
+        color: WHITE;
+        font-size: 0.9em;
+        transition: 0.6s;
+    }
+
+    header.sticky .active {
+        /* ACTIVE */
+        background-color: black;
+        color: white;
+        font-size: 0.9em;
+        transition: 0.6s;
+    }
+
+    header.sticky li :hover{
+        /* CHOOSE */
+        background-color: darkgray;
+        border-radius: 25px;
+        opacity: 50%;
+        font-size: 0.9em;
+        transition: 0.6s;
+    }
+
+    h1 {
+        position: absolute;
+        width: 691px;
+        height: 147px;
+        left: 50vw;
+        top: 50vh;
+        line-height: 70px;
+        color: white;
+        text-align: center; 
+        font-family: "Rubik", sans-serif;
+        font-size: 320%;
+        font-weight: 400;
+        margin: 0px;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }    
+
+    h1 > .magic > .magic-text {
+        font-family: "Rubik", sans-serif;
+        font-size: 72px;
+        animation: background-pan 2s linear infinite;
+        background: linear-gradient(
+                to right,
+                var(--purple),
+                var(--violet),
+                var(--pink),
+                var(--purple)
+        );
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
+        z-index: 2;
+    }
+
+    h1 > .magic {
+        display: inline-block;
+    }
+      
+    .astro {
+        --size: clamp(1px, 0.1vw, 1.5px);
+        display: block;
+        height: var(--size);
+        left: var(--star-left);
+        position: absolute;
+        top: var(--star-top);
+        width: var(--size);
+        left: -30px;
+
+        animation: fly 10000ms ease infinite;
+        z-index: 0;
+    }
+ 
+    @keyframes fly {
+        0% {
+            top: 120vh;
+            left: -10vw;
+        }
+
+        100% {
+            top: -50vh;
+            left: 140vw;
+        }
+    }
+
+    h1 > .magic > .magic-star {
+        --size: clamp(20px, 1.5vw, 30px);
+        display: block;  
+        height: var(--size);
+        left: var(--star-left);
+        position: absolute;
+        top: var(--star-top);
+        width: var(--size);
+
+    }
+
+    h1 > .magic > .magic-star {
+        --size: clamp(20px, 1.5vw, 30px);
+
+        animation: scale 700ms ease forwards;
+    }
+
+    h1 > .magic > .magic-star > svg {
+        display: block;
+        opacity: 0.7;
+    }
+    
+    h1 > .magic > .magic-star > svg {
+        animation: rotate 1000ms linear infinite; 
+
+    }
+    
+    h1 > .magic > .magic-star > svg > path {
+        fill: var(--violet);
+    }
+
+   
+    @keyframes move-background {
+        from {
+            -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to { 
+            -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+    }
+    @-webkit-keyframes move-background {
+        from {
+            -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to { 
+            -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+    }
+  
+    @-moz-keyframes move-background {    
+        from {
+            -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to { 
+            -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+    }
+  
+    @-webkit-keyframes move-background {
+        from {
+            -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        to { 
+            -webkit-transform: translate3d(1000px, 0px, 0px);
+        }
+    }
+  
+  
+  .stars {
+   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: 0;
+    }
+  
+  .twinkling {
+      width:10000px;
+      height: 100%;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      
+        -moz-animation:move-background 5s linear infinite;
+        -ms-animation:move-background 5s linear infinite;
+        -o-animation:move-background 5s linear infinite;
+        -webkit-animation:move-background 5s linear infinite;
+        animation:move-background 60s linear infinite;
+    }
+  
+
+
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+    section{
+      min-height: 300vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: absolute;
+      
+    }
+    section:nth-child(1){
+      color: white;
+      }
+    section:nth-child(2){
+      color: #42455a;
+      background: rgb(255, 255, 255);
+      opacity: 40%;
+    } 
+    section:nth-child(3){
+      color: rgba(255, 255, 255, 0.2);
+    }
+    section:nth-child(4){
+      color: #42455a;
+      background: rgb(255, 255, 255);
+      opacity: 40%;
+    }
+    section .container{
+      margin: 100px;
+    }
+    section h1{
+      font-size: 3rem;
+      margin: 20px;
+    }
+    section h2{
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+    }
+    section .text-container{
+       display: flex;
+    }
+    section .text-container .text-box{
+      margin: 20px;
+      padding: 20px;
+      border-radius: 25px;
+      background: rgb(255, 255, 255, 0.2);
+    }
+    section .text-container .text-box h3{
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: hwb(0 100% 0%);
+    }
+    
+    @media (max-width: 900px){
+      section h1{
+        font-size: 2rem;
+        text-align: center;
+      }
+      section .text-container{
+        flex-direction: column;
+      }
+    }
+    
+    .reveal{
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: 1s all ease;
+    }
+    
+    .reveal.active{
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
